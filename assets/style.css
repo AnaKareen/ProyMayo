@@ -68,7 +68,7 @@ body {
   margin-left: 25px;
   font-size: var(--FontH5);
   font-weight: 900;
-  background: url(https://img.freepik.com/premium-photo/poster-international-day-war-environment_1170031-5372.jpg?ga=GA1.1.1543009478.1729142181&semt=ais_hybrid) no-repeat top;
+  background: url(https://img.freepik.com/premium-photo/3d-rendered-photo-children-holding-earth-hands-against-green-spring-background_1158030-11780.jpg?ga=GA1.1.1543009478.1729142181&semt=ais_hybrid) no-repeat top;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 95%;
@@ -78,7 +78,7 @@ body {
 
 #wrapper #logo h1:hover {
   transform: scale(1.13) translateX(-10px);
-  background: url(https://img.freepik.com/premium-photo/poster-international-day-war-environment_1170031-5372.jpg?ga=GA1.1.1543009478.1729142181&semt=ais_hybrid) no-repeat center;
+  background: url(https://img.freepik.com/premium-photo/3d-rendered-photo-children-holding-earth-hands-against-green-spring-background_1158030-11780.jpg?ga=GA1.1.1543009478.1729142181&semt=ais_hybrid) no-repeat center;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 100%;
@@ -175,7 +175,7 @@ body {
 #wrapper #d p {
   font-size: var(--FontD);
   font-weight: 900;
-  background: url(https://img.freepik.com/premium-photo/poster-international-day-war-environment_1170031-5372.jpg?ga=GA1.1.1543009478.1729142181&semt=ais_hybrid) no-repeat center;
+  background: url(https://img.freepik.com/premium-photo/3d-rendered-photo-children-holding-earth-hands-against-green-spring-background_1158030-11780.jpg?ga=GA1.1.1543009478.1729142181&semt=ais_hybrid) no-repeat center;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 100%;
@@ -185,7 +185,7 @@ body {
 
 #wrapper #d p:hover {
   transform: scale(1.13);
-  background: url(https://img.freepik.com/premium-photo/poster-international-day-war-environment_1170031-5372.jpg?ga=GA1.1.1543009478.1729142181&semt=ais_hybrid) no-repeat top;
+  background: url(https://img.freepik.com/premium-photo/3d-rendered-photo-children-holding-earth-hands-against-green-spring-background_1158030-11780.jpg?ga=GA1.1.1543009478.1729142181&semt=ais_hybrid) no-repeat top;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 130%;
@@ -694,3 +694,4 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
   }
+  

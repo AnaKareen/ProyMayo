@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style.css">
     <link rel="icon" href="https://cdn-icons-png.freepik.com/512/5722/5722394.png?ga=GA1.1.1543009478.1729142181">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+
     <title>CleanAir</title>
 </head>
 
@@ -93,7 +98,7 @@
                 alt="ModernLiving">
         </div>
         <div id="slide">
-            <h1>Funcion y Objetivoo</h1>
+            <h1>Funcion y Objetivo</h1>
             <p>Nuestra sistema utiliza datos de fuentes confiables como el Sistema Nacional de Información de la
                 Calidad del Aire (SINAICA),
                 la Agencia de Protección Ambiental (EPA) y la Organización Mundial de la Salud (OMS).
@@ -127,50 +132,61 @@
     <!----------------------------------------------------Slide3--------------------------------------------------->
     <div id="wrapper" class="slide3">
         <div id="ImageContainer">
-            <img src="https://cdn-icons-png.freepik.com/512/2707/2707254.png?ga=GA1.1.1543009478.1729142181"
-                alt="BedroomInterior">
+            <div id="chart_div" style="width: 400px; height: 120px; margin-left: 100px;  margin-bottom: 200px;">
+
+                <script type="text/javascript">
+                    google.charts.load('current', { 'packages': ['gauge'] });
+                    google.charts.setOnLoadCallback(drawChart);
+
+                    function drawChart() {
+
+                        var data = google.visualization.arrayToDataTable([
+                            ['Label', 'Value'],
+                            ['Clean', 55],
+                        ]);
+
+                        var options = {
+                            width: 600, height: 320,
+                            redFrom: 90, redTo: 100,
+                            yellowFrom: 75, yellowTo: 90,
+                            greenFrom: 60, greenTo: 75,
+                            minorTicks: 5
+                        };
+
+                        var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
+
+                        chart.draw(data, options);
+
+                        setInterval(function () {
+                            data.setValue(0, 1, 40 + Math.round(60 * Math.random()));
+                            chart.draw(data, options);
+                        }, 13000);
+                        setInterval(function () {
+                            data.setValue(1, 1, 40 + Math.round(60 * Math.random()));
+                            chart.draw(data, options);
+                        }, 5000);
+                        setInterval(function () {
+                            data.setValue(2, 1, 60 + Math.round(20 * Math.random()));
+                            chart.draw(data, options);
+                        }, 26000);
+                    }
+                </script>
+
+
+            </div>
+
         </div>
         <div id="slide">
-            <h1>Estadísticas de Contaminación</h1>
-            <p>A continuación se muestra un gráfico con los niveles de contaminación del aire para diferentes especies,
-                utilizando datos en tiempo real:</p>
+            <h1>Medidores de aire en Mexico</h1>
+            <p>Este indicador muestra de manera clara y visual cuán contaminado está el aire que respiramos, permitiendo a los usuarios
+                 tomar decisiones informadas para proteger su salud y la de su comunidad.
+                  Utilizando datos de fuentes confiables como el Sistema Nacional de Información de la Calidad del Aire (SINAICA), este medidor no solo informa sobre la calidad del aire, sino que también educa sobre el impacto de los contaminantes en nuestra salud.</p>
 
-            <div class="wrapper">
-                <input type="radio" name="species" id="gromflomites">
-                <label for="gromflomites">Gromflomites</label>
+            
 
-                <input type="radio" name="species" id="jerrys" checked>
-                <label for="jerrys">Jerrys</label>
 
-                <input type="radio" name="species" id="squanchies">
-                <label for="squanchies">Squanchies</label>
 
-                <div class="chart">
-                    <ul class="values">
-                        <li class="value"></li>
-                        <li class="value"></li>
-                        <li class="value"></li>
-                        <li class="value"></li>
-                        <li class="value"></li>
-                    </ul>
 
-                    <ul class="axis y">
-                        <li data-mark="20"></li>
-                        <li data-mark="40"></li>
-                        <li data-mark="60"></li>
-                        <li data-mark="80"></li>
-                        <li data-mark="100"></li>
-                    </ul>
-
-                    <ul class="axis x">
-                        <li data-mark="2015"></li>
-                        <li data-mark="2016"></li>
-                        <li data-mark="2017"></li>
-                        <li data-mark="2018"></li>
-                        <li data-mark="2019"></li>
-                    </ul>
-                </div>
-            </div>
         </div>
     </div>
     <!----------------------------------------------------/Slide3--------------------------------------------------->
